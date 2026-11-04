@@ -1,0 +1,79 @@
+# config/config.yaml
+
+project:
+  name: ApplicationWriter_RAG_LLM
+
+input:
+  directory: data/input
+
+  # The script expects exactly one job posting in this directory.
+  supported_extensions:
+    - .txt
+    - .md
+    - .html
+    - .htm
+
+generation:
+  # Choose:
+  # application
+  # cv_profile
+  # skills
+  # all
+  output_type: all
+
+  language: English
+
+  output_directory: data/output
+  filename_prefix: generated
+
+  application:
+    include_motivation: true
+    include_relevant_experience: true
+    include_skills: true
+    include_closing: true
+    max_words: 500
+
+  cv_profile:
+    max_words: 250
+    use_first_person: true
+
+  skills:
+    max_skills: 20
+    include_explanations: true
+
+llm:
+  temperature: 0.3
+
+embeddings:
+  model_name: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+  device: cpu
+
+retrieval:
+  # Number of job-posting chunks to retrieve
+  job_posting_chunks: 20
+
+  # Number of previous applications to consider
+  similar_applications: 3
+
+  # Number of chunks to retrieve from selected previous applications
+  previous_application_chunks: 10
+
+  # Number of lecture guidance chunks to retrieve
+  guideline_chunks: 5
+
+databases:
+  applications:
+    directory: data/chromaDB/applications_db
+    collection_name: applications
+
+  guidelines:
+    directory: data/chromaDB/guidelines_db
+    collection_name: guidelines
+
+  jobpostings:
+    directory: data/chromaDB/job_postings_db
+    collection_name: job_postings
+
+guidelines:
+  writing_rules: data/WritingGuidelines/writing_rules.md
+  personal_profile: data/WritingGuidelines/personal_profile.md

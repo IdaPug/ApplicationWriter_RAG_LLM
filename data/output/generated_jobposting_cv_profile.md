@@ -1,0 +1,3 @@
+Recent MSc graduate in Mathematical Modelling and Computation (DTU) with two years' experience as a Student Algorithm Developer building and deploying deep learning pipelines for imaging data. Strong Python software engineering skills with exposure to Docker, CI/CD, and MLOps practices. Proven ability to own technical projects end-to-end — from data preprocessing and model development to production deployment — while collaborating with domain experts. Quantitative background in time series analysis, statistical modelling, and inverse problems. Motivated to apply ML engineering expertise to energy markets and trading systems in a fast-paced, production-focused environment.
+
+---

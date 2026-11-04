@@ -1,0 +1,44 @@
+[project]
+name = "application-writer-rag-llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "IdaPug", email = "s204211@dtu.dk" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "bs4>=0.0.2",
+    "chromadb==0.5.3",
+    "fastapi<0.116",
+    "gradio==4.44.0",
+    "huggingface-hub>=0.23.2,<1.0",
+    "ibm-watsonx-ai==1.1.2",
+    "jinja2==3.1.4",
+    "langchain==0.2.11",
+    "langchain-chroma>=0.2.2",
+    "langchain-community==0.2.10",
+    "langchain-huggingface>=0.0.3",
+    "langchain-ibm==0.1.11",
+    "lxml>=6.1.3",
+    "onnxruntime==1.23.2",
+    "openai>=3.36.0",
+    "pip>=26.2.2",
+    "pydantic==2.10.6",
+    "pypdf>=6.21.2",
+    "python-dotenv>=1.2.4",
+    "pyyaml>=6.0.3",
+    "sentence-transformers>=5.7.0",
+    "starlette<1.0.0",
+    "torch==2.2.2",
+    "transformers>=4.57.6",
+    "uvicorn==0.30.6",
+]
+
+[project.scripts]
+rag-llm-project = "application_writer_rag_llm:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
