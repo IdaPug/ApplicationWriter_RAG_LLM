@@ -16,5 +16,6 @@ data/chromaDB/applications_db/**
 data/chromaDB/guidelines_db/**
 data/chromaDB/jobpostings_db/**
 data/input/**
+data/output/**
 data/job_posting_summaries/**
 data/WritingGuidelines/personal_profile.md
